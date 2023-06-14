@@ -31,7 +31,7 @@ jobs:
       - name: Run local k6 test
         uses: grafana/k6-action@v0.2.0
         with:
-          filename: $HOME/Src/Scenarious/firstScenario.js
+          filename: './Src/Scenarious/firstScenario.js'
   # This workflow contains a single job called "greet"
   greet:
     # The type of runner that the job will run on
