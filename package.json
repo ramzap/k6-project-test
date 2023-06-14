@@ -1,0 +1,11 @@
+{
+  "name": "k6-my-project",
+  "version": "1.0.0",
+  "description": "this is my k6 project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ramzap",
+  "license": "ISC"
+}
