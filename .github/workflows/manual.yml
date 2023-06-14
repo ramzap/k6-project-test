@@ -43,11 +43,6 @@ jobs:
         with:
           name: k6-summary-report-html
           path: summary.html
-      - name: Upload performance test results
-        uses: actions/upload-artifact@v3
-        with:
-          name: k6-summary-report-text
-          path: stdout.txt
   # This workflow contains a single job called "greet"
   greet:
     # The type of runner that the job will run on
