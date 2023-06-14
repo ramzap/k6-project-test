@@ -32,7 +32,7 @@ jobs:
         uses: grafana/k6-action@v0.2.0
         with:
           filename: ./Src/Scenarious/firstScenario.js
-          flags: --out json=summary.json
+          flags: --out json=summary.json --out influxdb=http://localhost:8086/k6
       - name: Upload performance test results
         uses: actions/upload-artifact@v3
         with:
