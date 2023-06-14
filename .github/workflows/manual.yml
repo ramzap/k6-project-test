@@ -31,7 +31,7 @@ jobs:
       - name: Run local k6 test
         uses: grafana/k6-action@v0.2.0
         with:
-          filename: ../Src/Scenarious/firstScenario.js
+          filename: ./Src/Scenarious/firstScenario.js
       - name: HTML Preview
         id: html_preview
         uses: pavi2410/html-preview-action@v2
