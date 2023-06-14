@@ -32,11 +32,12 @@ jobs:
         uses: grafana/k6-action@v0.2.0
         with:
           filename: ./Src/Scenarious/firstScenario.js
-      - name: HTML Preview
-        id: html_preview
-        uses: pavi2410/html-preview-action@v2
+          flags: --out html=summary.html
+      - name: Upload performance test results
+        uses: actions/upload-artifact@v3
         with:
-          html_file: 'summary.html'
+          name: k6-report
+          path: summary.html
   # This workflow contains a single job called "greet"
   greet:
     # The type of runner that the job will run on
