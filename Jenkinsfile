@@ -8,7 +8,12 @@ pipeline {
                 sh 'choco install k6'
                 echo 'Running K6 performance tests...'
                 sh ' k6 run ./Src/Scenarious/firstScenario.js --out influxdb=http://localhost:8086/k6'
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: '', reportFiles: 'summary.html', reportName: 'k6 report', reportTitles: '', useWrapperFileDirectly: true])
+            steps {
+      unzip zipFile: 'k6 pipeline', dir: 'C:\Users\2132127\.jenkins\workspace'
+}
+            steps {
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'C:\Users\2132127\.jenkins\workspace\k6 pipeline', reportFiles: 'summary.html', reportName: 'k6 report', reportTitles: '', useWrapperFileDirectly: true])
+            }
             }
         }
     }
