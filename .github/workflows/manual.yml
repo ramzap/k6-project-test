@@ -41,7 +41,7 @@ jobs:
             INFLUX_USERNAME: admin
             INFLUX_PASSWORD: admin
             path: summary.json
-            ENVIROMENT: influxdb="http://${INFLUX_USERNAME}:${INFLUX_PASSWORD}@influxdb:8086/k6"
+            ENVIROMENT: influxdb="http://${INFLUX_USERNAME}:${INFLUX_PASSWORD}@localhost:8086/k6"
       - name: Upload performance test results
         uses: actions/upload-artifact@v3
         with:
