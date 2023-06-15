@@ -8,7 +8,7 @@ pipeline {
                 sh 'choco install k6'
                 echo 'Running K6 performance tests...'
                 sh ' k6 run ./Src/Scenarious/firstScenario.js --out influxdb=http://localhost:8086/k6'
-                sh ' unzip "*.zip"'
+                sh ' unzip "C:/Users/2132127/.jenkins/workspace/k6 pipeline.zip"'
                 publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'C:/Users/2132127/.jenkins/workspace/k6 pipeline', reportFiles: 'summary.html', reportName: 'k6 report', reportTitles: '', useWrapperFileDirectly: true])
             }
         }
