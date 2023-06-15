@@ -38,7 +38,7 @@ jobs:
         with:
           name: k6-summary-report-json 
           path: summary.json
-          environment:  influxdb=http://influxdb:8086/k6
+          environment:  influxdb=http://admin:admin@influxdb:8086/k6
       - name: Upload performance test results
         uses: actions/upload-artifact@v3
         with:
